@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Notes - Tugas 2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>Aplikasi Notes</h1>
+        <p>Tambah, lihat, edit, dan hapus catatan.</p>
+      </header>
+
+      <section class="card">
+        <h2 id="form-title">Tambah Catatan</h2>
+        <form id="note-form">
+          <input type="hidden" id="note-id" />
+
+          <label for="judul">Judul</label>
+          <input id="judul" name="judul" type="text" required />
+
+          <label for="isi">Isi</label>
+          <textarea id="isi" name="isi" rows="4" required></textarea>
+
+          <div class="actions">
+            <button type="submit" id="submit-btn">Simpan</button>
+            <button type="button" id="cancel-btn" class="ghost hidden">Batal Edit</button>
+          </div>
+        </form>
+        <p id="message" class="message"></p>
+      </section>
+
+      <section class="card">
+        <div class="list-header">
+          <h2>Daftar Catatan</h2>
+          <button id="reload-btn" class="ghost">Refresh</button>
+        </div>
+        <div id="notes-list" class="notes-list"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
